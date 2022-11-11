@@ -26,13 +26,16 @@ import StateManagement from './components/context/StateManagement'
 import Form from './components/form/Form'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import CustomHook from './components/customhook/CustomHook'
+import FetchCat from './components/customhook/FetchCat'
 
 function App() {
  
 
     return (
       <div className="App">
-    <Form/>
+    <FetchCat/>
+    
     </div>
   )
 }

@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query'
 import  Axios  from 'axios'
  const Home = () =>{
 
-  const { data: catData, isLoading, isError,refetch } = useQuery(['cat'], () => {
+  const { data: catData, isLoading, isError,refetch } = useQuery(['cat'], async() => {
     return Axios.get('https://catfact.ninja/fact').then((res) => 
       res.data)
   })
