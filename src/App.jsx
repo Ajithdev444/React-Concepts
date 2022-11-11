@@ -27,15 +27,14 @@ import Form from './components/form/Form'
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import CustomHook from './components/customhook/CustomHook'
-import FetchCat from './components/customhook/FetchCat'
+import FetchCat  from './components/customhook/FetchCat'
+import Counters from './components/customhook/Counters'
 
 function App() {
  
-
     return (
       <div className="App">
-    <FetchCat/>
-    
+    <Counters/>
     </div>
   )
 }
