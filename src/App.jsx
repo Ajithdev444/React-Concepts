@@ -29,12 +29,19 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import CustomHook from './components/customhook/CustomHook'
 import FetchCat  from './components/customhook/FetchCat'
 import Counters from './components/customhook/Counters'
+import Person from './components/typeSafety/Person'
 
 function App() {
  
     return (
       <div className="App">
-    <Counters/>
+    <Person 
+     name = {22}
+     age = {21}
+     email = 'aj@tech.com'
+     isMarried = {false}
+     friends ={ ['musk','berg','gates','jeff','sundar']}
+    />
     </div>
   )
 }
