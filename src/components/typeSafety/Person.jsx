@@ -20,3 +20,11 @@ Person.propTypes = {
     friends: PropTypes.arrayOf(PropTypes.string)
 }
 export default Person
+
+// <Person 
+// name = {22}
+// age = {21}
+// email = 'aj@tech.com'
+// isMarried = {false}
+// friends ={ ['musk','berg','gates','jeff','sundar']}
+// />

@@ -30,18 +30,29 @@ import CustomHook from './components/customhook/CustomHook'
 import FetchCat  from './components/customhook/FetchCat'
 import Counters from './components/customhook/Counters'
 import Person from './components/typeSafety/Person'
+import Homes from './components/reduxtoolkit/Homes'
+import Login from './components/reduxtoolkit/Login'
+import Contacts from './components/reduxtoolkit/Contacts'
+import { Provider } from 'react-redux'
+import  {store}  from './components/reduxtoolkit/Store'
 
 function App() {
  
     return (
       <div className="App">
-    <Person 
-     name = {22}
-     age = {21}
-     email = 'aj@tech.com'
-     isMarried = {false}
-     friends ={ ['musk','berg','gates','jeff','sundar']}
-    />
+        <Provider store={store}>
+        <Router>
+          <Link to='/'>Home</Link>
+          <Link to='/login'>Login</Link>
+          <Link to='/contacts'>Contacts</Link>
+          <Routes>
+            <Route path='/' element={<Homes/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/contacts' element={<Contacts/>}/>
+          </Routes>
+        </Router>
+        </Provider>
+   
     </div>
   )
 }
